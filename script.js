@@ -21,8 +21,8 @@ function detectMobile() {
 window.onload = function() {
   if (detectMobile()) {
       var message = document.createElement('div');
-      message.innerHTML = '<div>This game is not available on mobile devices. Please visit from a desktop or laptop to play. Visit our <a href="https://www.aaafreight.net">website!</a>.</div>';
-      message.style.cssText = "position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-image: url('images/bg.png'); background-repeat: no-repeat; color: #fff; padding: 20px; text-align: center; font-size: 24px; z-index: 9999;";
+      message.innerHTML = '<div>This game is not available on mobile devices. Please visit from a desktop or laptop to play. Visit our <a href="https://www.aaafreight.net">websitew!</a>.</div>';
+      message.style.cssText = "position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-image: url('images/bg.png'); background-repeat: no-repeat; background-position: center; color: #fff; padding: 20px; text-align: center; font-size: 24px; z-index: 9999;";
       document.body.style.overflow = 'hidden'; // Prevent scrolling
       document.body.appendChild(message);
   } else {
