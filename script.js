@@ -22,7 +22,7 @@ window.onload = function() {
   if (detectMobile()) {
       var message = document.createElement('div');
       message.innerHTML = 'This game is not available on mobile devices. Please visit from a desktop or laptop to play <a href="https://www.example.com">Go to the website</a>.';
-      message.style.cssText = 'position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: #A3EBB1; color: #fff; padding: 20px; text-align: center; font-size: 24px; z-index: 9999;';
+      message.style.cssText = "position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-image: url('images/bg.png'); background-repeat: no-repeat; color: #fff; padding: 20px; text-align: center; font-size: 24px; z-index: 9999;";
       document.body.style.overflow = 'hidden'; // Prevent scrolling
       document.body.appendChild(message);
   } else {
