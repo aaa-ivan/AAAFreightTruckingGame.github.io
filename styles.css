@@ -52,10 +52,11 @@ body {
   font-family:'Courier New', Courier, monospace;
   text-decoration: none;
   color: inherit;
-  color: white;
+  color: black;
   font-style: italic;
   font-weight: bold;
   font-size: 150px;
+  text-decoration: underline;
 }
 
 #website_link:hover {
