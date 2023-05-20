@@ -1,0 +1,75 @@
+body {
+    /* overflow: hidden; */
+    background-image: url('images/bg.png');
+    background-repeat: no-repeat;
+    background-position: left top;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    width: 100%;
+    height: 100%;
+
+}
+
+.hidden-cursor {
+  cursor: none;
+}
+
+#ad_image {
+  width: 60px;
+  position: fixed;
+  right: 20%;
+  top: 0px;
+}
+
+#ad_text {
+  font-family:'Courier New', Courier, monospace;
+  font-size: 80px;
+  text-decoration: none;
+  color: inherit;
+  color: black;
+  font-style: italic;
+  font-weight: bold;
+}
+
+#ad_text:hover {
+  color: white;
+}
+
+#banner_image {
+  position: fixed;
+  top: 70px;
+  right: 0px;
+  width: 650px;
+}
+
+a {
+  position: fixed;
+  right: 0;
+  top: 0;
+}
+
+#truck {
+    position: absolute;
+    width: 15%;
+    background-image: url('truck.png');
+    background-size: contain;
+    transform-origin: top center;
+    transition: transform 0.30s linear;
+  }
+
+  .page {
+    width: 1000px;
+    height: 1000px;
+    position: relative;
+    margin: 0;
+  }
+
+h1 {
+  font-family:'Courier New', Courier, monospace;
+  color: white;
+  font-style:italic;
+  font-size: 50px;
+  padding-top: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
