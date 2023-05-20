@@ -28,6 +28,9 @@ body {
   color: black;
   font-style: italic;
   font-weight: bold;
+  position: fixed;
+  right: 0;
+  top: 0;
 }
 
 #ad_text:hover {
