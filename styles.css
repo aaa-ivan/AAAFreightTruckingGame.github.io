@@ -7,7 +7,6 @@ body {
     overflow-y: hidden;
     width: 100%;
     height: 100%;
-
 }
 
 .hidden-cursor {
@@ -42,11 +41,29 @@ body {
   width: 650px;
 }
 
+#mobile_message {
+  font-family:'Courier New', Courier, monospace;
+}
+
+#website_link {
+  font-family:'Courier New', Courier, monospace;
+  text-decoration: none;
+  color: inherit;
+  color: black;
+  font-style: italic;
+  font-weight: bold;
+}
+
+#website_link:hover {
+  color: white;
+}
+
+/* 
 a {
   position: fixed;
   right: 0;
   top: 0;
-}
+} */
 
 #truck {
     position: absolute;
