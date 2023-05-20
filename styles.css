@@ -52,13 +52,13 @@ body {
   font-family:'Courier New', Courier, monospace;
   text-decoration: none;
   color: inherit;
-  color: black;
+  color: white;
   font-style: italic;
   font-weight: bold;
 }
 
 #website_link:hover {
-  color: white;
+  color: black;
 }
 
 /* 
