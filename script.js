@@ -21,11 +21,10 @@ function detectMobile() {
 window.onload = function() {
   if (detectMobile()) {
       var message = document.createElement('div');
-      message.innerHTML = 'This website is not available on mobile devices. Visit us on desktop!';
+      message.innerHTML = 'This game is not available on mobile devices. Please visit from a desktop or laptop to play.';
       message.style.cssText = 'position: fixed; top: 0; left: 0; width: 100%; background-color: #f44336; color: #fff; padding: 10px; text-align: center; font-size: 18px;';
       document.body.insertBefore(message, document.body.firstChild);
-  }
-};
+  } else {
 
 var game = (function() {
   var score = 0;
@@ -372,3 +371,6 @@ document.addEventListener('keypress', resetCursorTimer);
 
 // Start the initial timer
 cursorTimeout = setTimeout(hideCursor, inactivityDuration);
+
+}
+};
