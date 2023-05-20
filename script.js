@@ -13,6 +13,20 @@ var inter3 = 5000;
 const screenWidth = window.innerWidth;
 const screenHeight = window.innerHeight;
 
+function detectMobile() {
+  var isMobile = /iPhone|iPad|iPod|Android|webOS|BlackBerry|Windows Phone/i.test(navigator.userAgent);
+  return isMobile;
+}
+
+window.onload = function() {
+  if (detectMobile()) {
+      var message = document.createElement('div');
+      message.innerHTML = 'This website is not available on mobile devices. Visit us on desktop!';
+      message.style.cssText = 'position: fixed; top: 0; left: 0; width: 100%; background-color: #f44336; color: #fff; padding: 10px; text-align: center; font-size: 18px;';
+      document.body.insertBefore(message, document.body.firstChild);
+  }
+};
+
 var game = (function() {
   var score = 0;
   var level = 1;
