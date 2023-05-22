@@ -81,7 +81,7 @@ a {
 
 #truck {
     position: absolute;
-    width: 15%;
+    width: 10%;
     background-image: url('truck.png');
     background-size: contain;
     transform-origin: top center;
