@@ -74,7 +74,7 @@ var game = (function() {
         if (checkCollision(imgRect, truckRect)) {
           img.remove(); // Remove the image element from the DOM
           score += price;
-          level = Math.floor((score/100 + 20) / 20 - 1);
+          level = Math.floor((score/100 + 20) / 20) - 1;
           inter = 1500 / (level * 2);
           document.getElementById("level").innerHTML = "Level " + level;
           document.getElementById("score").innerHTML = "Score $" + score.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
@@ -128,7 +128,7 @@ var game = (function() {
         if (checkCollision(imgRect, truckRect)) {
           img.remove(); // Remove the image element from the DOM
           score += price;
-          level = Math.floor((score/100 + 20) / 20 - 1);
+          level = Math.floor((score/100 + 20) / 20) - 1;
           inter = 1500 / (level * 2);
           document.getElementById("level").innerHTML = "Level " + level;
           document.getElementById("score").innerHTML = "Score $" + score.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
@@ -182,7 +182,7 @@ var game = (function() {
         if (checkCollision(imgRect, truckRect)) {
           img.remove(); // Remove the image element from the DOM
           score += price;
-          level = Math.floor((score/100 + 20) / 20 - 1);
+          level = Math.floor((score/100 + 20) / 20) - 1;
           inter = 1500 / (level * 2);
           document.getElementById("level").innerHTML = "Level " + level;
           document.getElementById("score").innerHTML = "Score $" + score.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
