@@ -29,7 +29,7 @@ window.onload = function() {
 
 var game = (function() {
   var score = 0;
-  var level = 1;
+  var level = 0;
   var img_speed = 1;
   var img_limit = 30;
 
@@ -57,7 +57,7 @@ var game = (function() {
       var price = 100;
       truck_speed = 8 + game.getLevel() * 0.4;
       img_speed = 1 + level * 0.2;
-      truck.style.width = (15 + level * 3) + '%';
+      truck.style.width = (10 + level * 0.75) + '%';
       img.style.width = (1.5 + (level - 1) / 100) + '%';
 
       // Check if the image has reached the bottom of the screen
@@ -111,7 +111,7 @@ var game = (function() {
       var price = 250.00;
       img_speed = 1 + level * 0.2;
       truck_speed = 8 + game.getLevel() * 0.4;
-      truck.style.width = (15 + level * 3) + '%';
+      truck.style.width = (10 + level * 0.75) + '%';
       img.style.width = (2.5 + (level - 1) / 100) + '%';
 
       // Check if the image has reached the bottom of the screen
@@ -165,7 +165,7 @@ var game = (function() {
       var price = 500.00;
       img_speed = 1 + level * 0.2;
       truck_speed = 8 + game.getLevel() * 0.4;
-      truck.style.width = (15 + level * 3) + '%';
+      truck.style.width = (10 + level * 0.75) + '%';
       img.style.width = (5 + (level - 1) / 100) + '%';
 
       // Check if the image has reached the bottom of the screen
