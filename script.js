@@ -1,6 +1,8 @@
 let truck = document.getElementById("truck");
-let x = 800;
-let y = 750;
+const screenWidth = window.innerWidth;
+const screenHeight = window.innerHeight;
+let x = screenWidth*0.45;
+let y = screenHeight;
 let moveX = 0;
 let moveY = 0;
 let rotation = -90;
@@ -10,8 +12,6 @@ var truck_speed = 8;
 var inter = 500;
 var inter2 = 1000;
 var inter3 = 5000;
-const screenWidth = window.innerWidth;
-const screenHeight = window.innerHeight;
 
 function detectMobile() {
   var isMobile = /iPhone|iPad|iPod|Android|webOS|BlackBerry|Windows Phone/i.test(navigator.userAgent);
@@ -31,8 +31,10 @@ var game = (function() {
   var score = 0;
   var level = 1;
   var img_speed = 1;
+  var img_limit = 30;
 
   function spawnImage() {
+    if (document.getElementsByTagName('img').length < img_limit) {
     var img = document.createElement('img');
     img.src = 'images/load.png'; // Replace with the path to your image
     img.style.position = 'absolute';
@@ -46,6 +48,7 @@ var game = (function() {
 
     // Append the image to the body
     document.body.appendChild(img);
+    }
 
     function updatePosition() {
       var currentTop = parseInt(img.style.top, 10);
@@ -84,6 +87,7 @@ var game = (function() {
   }
 
   function spawnImage2() {
+    if (document.getElementsByTagName('img').length < img_limit) {
     var img = document.createElement('img');
     console.log(score)
     img.src = 'images/load.png'; // Replace with the path to your image
@@ -98,6 +102,7 @@ var game = (function() {
 
     // Append the image to the body
     document.body.appendChild(img);
+    }
 
     function updatePosition() {
       var currentTop = parseInt(img.style.top, 10);
@@ -136,6 +141,7 @@ var game = (function() {
   }
 
   function spawnImage3() {
+    if (document.getElementsByTagName('img').length < img_limit) {
     var img = document.createElement('img');
     console.log(score)
     img.src = 'images/load.png';
@@ -150,6 +156,7 @@ var game = (function() {
 
     // Append the image to the body
     document.body.appendChild(img);
+    }
 
     function updatePosition() {
       var currentTop = parseInt(img.style.top, 10);
