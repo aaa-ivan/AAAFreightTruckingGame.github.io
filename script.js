@@ -23,7 +23,7 @@ window.onload = function() {
       var message = document.createElement('div');
       message.innerHTML = '<div id="mobile_message">This game is not available on mobile devices. <br> Please visit from a desktop or laptop to play. <br> Visit our <a id="website_link1" href="https://www.aaafreight.net">website</a>! <br> <br> <br> <br> <br> <br> <br> <a id="website_link2" href="https://www.aaafreight.net">AAA Freight!</a></div>';
       message.style.cssText = "position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-image: url('images/bg.png'); background-repeat: repeat; background-position: center top; color: #000000; font-weight: bold; padding: 20px; text-align: center; font-size: 48px; z-index: 9999;";
-      document.body.style.overflow = 'hidden'; // Prevent scrolling
+      document.body.style.overflow = 'hidden';
       document.body.appendChild(message);
   } else {
 
@@ -36,17 +36,15 @@ var game = (function() {
   function spawnImage() {
     if (document.getElementsByTagName('img').length < img_limit) {
     var img = document.createElement('img');
-    img.src = 'images/load.png'; // Replace with the path to your image
+    img.src = 'images/load.png';
     img.style.position = 'absolute';
     img.style.width = '1.5%';
 
-    // Set the random position
     var randomX = Math.floor(100 + Math.random() * 1700);
     var randomY = 100;
     img.style.left = randomX + 'px';
     img.style.top = randomY + 'px';
 
-    // Append the image to the body
     document.body.appendChild(img);
     }
 
@@ -60,11 +58,10 @@ var game = (function() {
       truck.style.width = (10 + level * 0.75) + '%';
       img.style.width = (1.5 + (level - 1) / 100) + '%';
 
-      // Check if the image has reached the bottom of the screen
       if (currentTop >= screenHeight - img.height) {
-        img.remove(); // Remove the image element from the DOM
+        img.remove();
       } else {
-        img.style.top = (currentTop + img_speed) + 'px'; // Update the position
+        img.style.top = (currentTop + img_speed) + 'px';
 
         // Check for collision with the 'truck' element
         var truckElement = document.getElementById('truck');
@@ -79,7 +76,7 @@ var game = (function() {
           document.getElementById("level").innerHTML = "Level " + level;
           document.getElementById("score").innerHTML = "Score $" + score.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
         } else {
-          requestAnimationFrame(updatePosition); // Call the function again for the next animation frame
+          requestAnimationFrame(updatePosition);
         }
       }
     }
@@ -90,17 +87,15 @@ var game = (function() {
     if (document.getElementsByTagName('img').length < img_limit) {
     var img = document.createElement('img');
     console.log(score)
-    img.src = 'images/load.png'; // Replace with the path to your image
+    img.src = 'images/load.png';
     img.style.position = 'absolute';
     img.style.width = '2.5%';
 
-    // Set the random position
     var randomX = Math.floor(100 + Math.random() * 1700);
     var randomY = 100;
     img.style.left = randomX + 'px';
     img.style.top = randomY + 'px';
 
-    // Append the image to the body
     document.body.appendChild(img);
     }
 
@@ -114,26 +109,24 @@ var game = (function() {
       truck.style.width = (10 + level * 0.75) + '%';
       img.style.width = (2.5 + (level - 1) / 100) + '%';
 
-      // Check if the image has reached the bottom of the screen
       if (currentTop >= screenHeight - img.height) {
-        img.remove(); // Remove the image element from the DOM
+        img.remove();
       } else {
-        img.style.top = (currentTop + img_speed) + 'px'; // Update the position
+        img.style.top = (currentTop + img_speed) + 'px';
 
-        // Check for collision with the 'truck' element
         var truckElement = document.getElementById('truck');
         var imgRect = img.getBoundingClientRect();
         var truckRect = truckElement.getBoundingClientRect();
 
         if (checkCollision(imgRect, truckRect)) {
-          img.remove(); // Remove the image element from the DOM
+          img.remove();
           score += price;
           level = Math.floor((score/100 + 20) / 20) - 1;
           inter = 1500 / (level * 2);
           document.getElementById("level").innerHTML = "Level " + level;
           document.getElementById("score").innerHTML = "Score $" + score.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
         } else {
-          requestAnimationFrame(updatePosition); // Call the function again for the next animation frame
+          requestAnimationFrame(updatePosition);
         }
       }
     }
@@ -148,13 +141,11 @@ var game = (function() {
     img.style.position = 'absolute';
     img.style.width = '4%';
 
-    // Set the random position
     var randomX = Math.floor(100 + Math.random() * 1700);
     var randomY = 100;
     img.style.left = randomX + 'px';
     img.style.top = randomY + 'px';
 
-    // Append the image to the body
     document.body.appendChild(img);
     }
 
@@ -168,26 +159,24 @@ var game = (function() {
       truck.style.width = (10 + level * 0.75) + '%';
       img.style.width = (5 + (level - 1) / 100) + '%';
 
-      // Check if the image has reached the bottom of the screen
       if (currentTop >= screenHeight - img.height) {
-        img.remove(); // Remove the image element from the DOM
+        img.remove();
       } else {
-        img.style.top = (currentTop + img_speed) + 'px'; // Update the position
+        img.style.top = (currentTop + img_speed) + 'px';
 
-        // Check for collision with the 'truck' element
         var truckElement = document.getElementById('truck');
         var imgRect = img.getBoundingClientRect();
         var truckRect = truckElement.getBoundingClientRect();
 
         if (checkCollision(imgRect, truckRect)) {
-          img.remove(); // Remove the image element from the DOM
+          img.remove();
           score += price;
           level = Math.floor((score/100 + 20) / 20) - 1;
           inter = 1500 / (level * 2);
           document.getElementById("level").innerHTML = "Level " + level;
           document.getElementById("score").innerHTML = "Score $" + score.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
         } else {
-          requestAnimationFrame(updatePosition); // Call the function again for the next animation frame
+          requestAnimationFrame(updatePosition);
         }
       }
     }
@@ -204,7 +193,7 @@ var game = (function() {
     );
   }
 
-  setInterval(spawnImage, inter); // Call spawnImage every 1 second (1000 milliseconds)
+  setInterval(spawnImage, inter);
   setInterval(spawnImage2, inter2);
   setInterval(spawnImage3, inter3);
 
@@ -220,7 +209,6 @@ var game = (function() {
 })();
 
 document.addEventListener("keydown", (event) => {
-  // prevent the default behavior of arrow keys
   event.preventDefault();
 
   switch (event.key) {
@@ -321,12 +309,10 @@ document.addEventListener("keyup", (event) => {
   }
 });
 
-// Updates the position every frame
 function update() {
   x += moveX;
   y += moveY;
 
-  // Prevents the truck from going off-screen
   if (x < 0) {
     x = 0;
   }
@@ -343,7 +329,6 @@ function update() {
     y = 1 - truck.offsetHeight;
   }
 
-  // Applies the rotation and position to the truck
   truck.style.transform = `translate(${x}px, ${y}px) rotate(${rotation}deg) scaleX(${scale})`;
 
   requestAnimationFrame(update);
@@ -351,21 +336,17 @@ function update() {
 
 requestAnimationFrame(update);
 
-// Set the inactivity duration in milliseconds
 const inactivityDuration = 1000;
 let cursorTimeout;
 
-// Function to hide the cursor
 function hideCursor() {
   document.body.classList.add('hidden-cursor');
 }
 
-// Function to show the cursor
 function showCursor() {
   document.body.classList.remove('hidden-cursor');
 }
 
-// Function to reset the cursor timer
 function resetCursorTimer() {
   clearTimeout(cursorTimeout);
   showCursor();
