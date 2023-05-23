@@ -54,7 +54,12 @@ var game = (function() {
       var screenHeight = window.innerHeight;
       var price = 100;
       truck_speed = 8 + game.getLevel() * 0.4;
+      if (level < 50) {
       img_speed = 1 + level * 0.2;
+      } else {
+        img_speed = level;
+        img_limit = 100
+      }
       truck.style.width = (10 + level * 0.75) + '%';
       img.style.width = (1.5 + (level - 1) / 100) + '%';
 
@@ -104,7 +109,12 @@ var game = (function() {
       var currentLeft = parseInt(img.style.left, 10);
       var screenHeight = window.innerHeight;
       var price = 250.00;
+      if (level < 50) {
       img_speed = 1 + level * 0.2;
+      } else {
+        img_speed = level;
+        img_limit = 100
+      }
       truck_speed = 8 + game.getLevel() * 0.4;
       truck.style.width = (10 + level * 0.75) + '%';
       img.style.width = (2.5 + (level - 1) / 100) + '%';
@@ -154,7 +164,12 @@ var game = (function() {
       var currentLeft = parseInt(img.style.left, 10);
       var screenHeight = window.innerHeight;
       var price = 500.00;
+      if (level < 50) {
       img_speed = 1 + level * 0.2;
+      } else {
+        img_speed = level;
+        img_limit = 100
+      }
       truck_speed = 8 + game.getLevel() * 0.4;
       truck.style.width = (10 + level * 0.75) + '%';
       img.style.width = (5 + (level - 1) / 100) + '%';
