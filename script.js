@@ -368,13 +368,16 @@ function resetCursorTimer() {
   cursorTimeout = setTimeout(hideCursor, inactivityDuration);
 }
 
-// Add event listeners to track cursor movements
 document.addEventListener('mousemove', resetCursorTimer);
 document.addEventListener('mousedown', resetCursorTimer);
 document.addEventListener('keypress', resetCursorTimer);
 
-// Start the initial timer
 cursorTimeout = setTimeout(hideCursor, inactivityDuration);
 
+var element = document.getElementsByTagName('h3')[0];
+
+document.addEventListener('keydown', function(event) {
+  element.remove();
+});
 }
 };
